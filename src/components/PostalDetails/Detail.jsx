@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import "swiper/css"
-import { isLoading, selectPostDetails } from '../../features/detail/detailSlice'
+import { errorMssg, isLoading, selectPostDetails } from '../../features/detail/detailSlice'
 import GMap from '../Map/GMap'
 import "./Detail.css"
 import { sliderSetting } from '../../utils/common'
@@ -12,6 +12,11 @@ import Spinner from '../../utils/Spinner/Spinner'
 const Detail = () => {
     const data = useSelector(selectPostDetails);
     const isloading = useSelector(isLoading);
+    const errorText = useSelector(errorMssg)
+
+    if (errorText !== null) {
+        alert(errorText)
+    }
 
     const cordinates = []
     data?.places?.forEach(element => {
@@ -22,7 +27,7 @@ const Detail = () => {
     return (
         <>
             {
-                isloading ? <Spinner/>
+                isloading ? <Spinner />
                     : data && <section className='d-section'>
                         <div className="d-header">
                             <h2><span className='d-text'>Country: </span><span className='d-text2'>{data.country}</span></h2>
