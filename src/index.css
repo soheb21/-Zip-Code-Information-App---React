@@ -13,30 +13,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
 }
 html {
   height: 100vh;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-.paddings {
-  padding: 1.5rem;
-}
+  scroll-behavior: smooth;
 
-.innerWidth {
-  width: 100%;
-}
-
-.flexCenter {
-  display: flex;
-  row-gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .button {
@@ -48,6 +30,7 @@ a {
   padding: 0.6rem 1.4rem;
   transition: all 300ms ease-in;
   border-radius: 10px;
+  margin: 0.3rem;
 }
 .button:hover {
   cursor: pointer;

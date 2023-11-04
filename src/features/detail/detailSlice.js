@@ -19,6 +19,11 @@ export const fetchPostalDetailsAsync = createAsyncThunk("/getPostalDetails", asy
 export const detailSlice = createSlice({
     name: "Postal-Details",
     initialState,
+    reducers: {
+        reset: (state) => {
+            state.data = null;
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchPostalDetailsAsync.pending, (state) => {
@@ -37,4 +42,5 @@ export const detailSlice = createSlice({
 })
 
 export const selectPostDetails = (state) => state.postalDetail.data;
+export const { reset } = detailSlice.actions;
 export default detailSlice.reducer;

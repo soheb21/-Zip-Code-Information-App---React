@@ -2,8 +2,11 @@
   width: 100%;
   background-color: var(--lightBlue);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  height: 6rem;
+  padding: 0 1rem;
+
 }
 .input-Container h1{
     color: var(--primary);
@@ -17,7 +20,7 @@
 .input-Container>div>input{
     width: 100%;
     border-radius: 10px;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: .5rem;
     outline: none;
     border: var(--shadow);

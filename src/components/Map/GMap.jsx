@@ -8,14 +8,10 @@ const GMap = ({ cordinates }) => {
         const lon = cordinates[1];
         ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`
     }, [cordinates])
-
-    console.log("c", cordinates)
     return (
 
-        <div div className="gmap" >
-            {
-                cordinates.length === 0 ? <h1>Map Not available</h1> : <iframe id="iframeId" ></iframe>
-            }
+        <div className="gmap" >
+            <iframe id="iframeId" ></iframe>
         </div >
 
     );
