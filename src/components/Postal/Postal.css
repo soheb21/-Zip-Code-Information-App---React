@@ -1,0 +1,24 @@
+.input-Container {
+  width: 100%;
+  background-color: var(--lightBlue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.input-Container h1{
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.input-Container>div{
+    gap: .2rem;
+    display: flex;
+}
+.input-Container>div>input{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 3rem;
+    padding: .5rem;
+    outline: none;
+    border: var(--shadow);
+}
