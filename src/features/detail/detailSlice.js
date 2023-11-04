@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { fetchPostalDetails } from "./detailAPI";
 const initialState = {
-    data: {},
+    data: null,
     loading: false,
     error: null
 };
@@ -30,7 +30,7 @@ export const detailSlice = createSlice({
             })
             .addCase(fetchPostalDetailsAsync.rejected, (state, action) => {
                 state.loading = false;
-                state.data = {};
+                state.data = null;
                 state.error = action.payload;
             })
     }

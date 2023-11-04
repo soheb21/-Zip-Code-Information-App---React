@@ -1,0 +1,9 @@
+.gmap{
+    height: 15rem;
+    overflow: hidden; 
+    width: 100%;
+}
+.gmap iframe{
+    height: 100%;
+    width: 100%;
+}
