@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import './App.css'
 import Postal from './components/Postal/Postal'
-import Detail from './components/PostalDetails/Detail'
+import Spinner from './utils/Spinner/Spinner';
+const Detail = React.lazy(() => import('./components/PostalDetails/Detail'));
 
 function App() {
   return (
     <>
       <Postal />
-      <Detail />
+      <Suspense fallback={<Spinner />}>
+        <Detail />
+      </Suspense>
     </>
   )
 }

@@ -7,18 +7,19 @@ const Postal = () => {
     const dispatch = useDispatch();
     const [postalCode, setPostalCode] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (postalCode) {
+    const handleSubmit = () => {
+        if (!postalCode) {
+            alert("please Enter the pincode")
+        }
+        else if (postalCode.length !== 6) {
+            alert("Please Enter Valid Postal Number")
+        }
+        else {
             dispatch(fetchPostalDetailsAsync(postalCode))
             setPostalCode("")
         }
-        else{
-            alert("please enter the pincode")
-        }
     }
-    const handleReset = (e) => {
-        e.preventDefault();
+    const handleReset = () => {
         dispatch(reset());
         setPostalCode("")
     }
@@ -26,9 +27,11 @@ const Postal = () => {
         <div className='input-Container paddings'>
             <h1>Enter Postal Code </h1>
             <div className=" ">
-                <input type="text" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter You Postal Code' />
-                <button className='button' onClick={(e) => handleSubmit(e)}>Submit</button>
-                <button className='button' onClick={(e) => handleReset(e)} >Reset</button>
+                <input type="number" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter You Postal Code' />
+                <div className="n-btn">
+                    <button className='button' onClick={handleSubmit}>Submit</button>
+                    <button className='button' onClick={handleReset} >Reset</button>
+                </div>
             </div>
         </div>
     )

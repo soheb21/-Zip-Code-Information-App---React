@@ -11,6 +11,13 @@
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
 }
+.d-header>h2{
+  font-weight: 400;
+}
+.d-header .d-text2{
+  font-weight: 400;
+  color: var(--btn);
+}
 .detail-container {
   padding: 1rem;
   display: flex;
@@ -26,6 +33,13 @@
   overflow: hidden;
   position: relative;
   box-shadow: var(--shadow);
+  
+}
+.detail-info >h1{
+  color: var(--btn);
+  font-weight: 400;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
 }
 .r-card {
   gap: 0.6rem;
@@ -33,37 +47,55 @@
   border-radius: 10px;
   width: 15rem;
   height: 9rem;
-  margin: 1rem;
+  margin: auto;
   transition: all 300ms ease-in;
-  border: 1px solid gray;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-.r-card > p {
-  background-color: white;
-  width: 100%;
-  font-size: 0.9rem;
-  height: 3rem;
-  text-align: center;
-}
-.r-card:hover {
-  scale: 1.025;
-  cursor: pointer;
+  align-items: start;
+  gap: .5rem;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(136, 150, 255, 0.46) 217.91%
   );
+  box-shadow: var(--shadow);
+  border-top: 1px solid gray;
+}
+.r-card .d-index{
+  width: 100%;
+  text-align: end;
+  color: var(--primary);
+}
+.r-card > p {
+  width: 100%;
+  font-size: 0.9rem;
+  height: 3rem;
+  text-align: start;
+  margin: auto;
+}
+.r-card > h4 {
+  font-weight: 400;
+  color: var(--btn);
+}
+.d-text {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+.d-sb{
+  font-weight: 700;
+}
+.r-card:hover {
+  scale: 1.025;
+  cursor: pointer;
+  background: var(--orange-gradient);
   box-shadow: 0px 27px 49px -20px rgba(136, 160, 255, 0.26);
 }
 .swiper-horizontal {
   overflow: visible;
 }
-.d-button{
- position: absolute;
- top: -40px;
- right: 0;
-  
+.d-button {
+  position: absolute;
+  top: -45px;
+  right: 0;
 }

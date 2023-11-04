@@ -42,5 +42,6 @@ export const detailSlice = createSlice({
 })
 
 export const selectPostDetails = (state) => state.postalDetail.data;
+export const isLoading = (state) => state.postalDetail.loading;
 export const { reset } = detailSlice.actions;
 export default detailSlice.reducer;
