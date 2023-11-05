@@ -20,14 +20,14 @@
   width: 100%;
   border-radius: 10px;
   font-size: 2rem;
-  padding: 0.5rem;
+  padding: .5rem;
   outline: none;
   border: var(--shadow);
+
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
 }
 
 .n-btn {

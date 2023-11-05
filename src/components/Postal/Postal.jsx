@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { fetchPostalDetailsAsync, reset } from '../../features/detail/detailSlice';
 import "./Postal.css"
 

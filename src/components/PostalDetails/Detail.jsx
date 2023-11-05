@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import {useSelector} from 'react-redux'
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import "swiper/css"
 import { errorMssg, isLoading, selectPostDetails } from '../../features/detail/detailSlice'
@@ -61,7 +61,7 @@ const Detail = () => {
 
             }
         </>
-        
+
 
     )
 }
