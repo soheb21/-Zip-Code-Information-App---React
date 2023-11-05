@@ -26,7 +26,7 @@ const Postal = () => {
     return (
 
         <div className='input-Container'>
-            <h1>Enter Postal Code </h1>
+            <h1>LEAD </h1>
             <div className=" ">
                 <input type="number" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter the Postal Number..' />
                 <div className="n-btn">
