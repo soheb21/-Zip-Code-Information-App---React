@@ -25,6 +25,9 @@
   border: var(--shadow);
 
 }
+::placeholder {
+   font-size: 1rem;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
