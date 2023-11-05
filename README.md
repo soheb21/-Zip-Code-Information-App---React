@@ -2,5 +2,6 @@
 
 #Website Images
 
-![Screenshot (249)](https://github.com/soheb21/-Zip-Code-Information-App---React/assets/92992903/7b43b9fd-2032-43de-b48e-3f098f6f28c1)
-![Screenshot (250)](https://github.com/soheb21/-Zip-Code-Information-App---React/assets/92992903/6599953c-52a1-473b-b62d-b511427e9339)
+
+![Screenshot (252)](https://github.com/soheb21/-Zip-Code-Information-App---React/assets/92992903/11ce72dd-8ebc-41d4-ba50-a94f9104252e)
+![Screenshot (251)](https://github.com/soheb21/-Zip-Code-Information-App---React/assets/92992903/b2a1fae8-71c8-41c7-b9a5-fc5ab215dcad)
