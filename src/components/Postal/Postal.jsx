@@ -9,7 +9,7 @@ const Postal = () => {
 
     const handleSubmit = () => {
         if (!postalCode) {
-            alert("please Enter the pincode")
+            alert("please Enter the Postal Number")
         }
         else if (postalCode.length !== 6) {
             alert("Please Enter Valid Postal Number")
@@ -28,7 +28,7 @@ const Postal = () => {
         <div className='input-Container'>
             <h1>Enter Postal Code </h1>
             <div className=" ">
-                <input type="number" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter You Postal Code' />
+                <input type="number" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter the Postal Number..' />
                 <div className="n-btn">
                     <button className='button' onClick={handleSubmit}>Submit</button>
                     <button className='button' onClick={handleReset} >Reset</button>
