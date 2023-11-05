@@ -45,7 +45,7 @@ const Detail = () => {
                                     {
                                         data?.places?.map((item, i) => (
                                             <SwiperSlide key={i} >
-                                                <div className="r-card">
+                                                <div className="d-card">
                                                     <span className='d-index'>{i + 1}</span>
                                                     <h4><span className='d-text'>State</span>: {`${item.state}`} <span className='d-sb'>{item['state abbreviation']}</span></h4>
                                                     <p><span className='d-text'>Place Name</span>: {item['place name']}</p>
@@ -61,6 +61,7 @@ const Detail = () => {
 
             }
         </>
+        
 
     )
 }

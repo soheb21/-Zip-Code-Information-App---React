@@ -9,13 +9,15 @@ const initialState = {
 export const fetchPostalDetailsAsync = createAsyncThunk("/getPostalDetails", async (postalCode, { rejectWithValue }) => {
     try {
         const response = await fetchPostalDetails(postalCode)
-        if (response.response.status !== 404) {
-            return response;
-        } else {
-            return rejectWithValue("Not Available");
+        if (response !== 404) {
+            return response.data;
         }
+        return rejectWithValue("Not Available")
+
     } catch (error) {
-        return rejectWithValue("Server Failed");
+        if (error) {
+            return rejectWithValue("Server Failed");
+        }
     }
 })
 
@@ -26,6 +28,7 @@ export const detailSlice = createSlice({
     reducers: {
         reset: (state) => {
             state.data = null;
+            state.error = null;
         }
     },
     extraReducers: (builder) => {
@@ -49,5 +52,5 @@ export const selectPostDetails = (state) => state.postalDetail.data;
 export const isLoading = (state) => state.postalDetail.loading;
 export const errorMssg = (state) => state.postalDetail.error;
 
-export const { reset } = detailSlice.actions;
+export const {reset} = detailSlice.actions;
 export default detailSlice.reducer;

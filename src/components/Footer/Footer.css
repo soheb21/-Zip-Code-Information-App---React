@@ -5,8 +5,9 @@
   width: 100%;
   background-color: var(--black);
   color: var(--lightBlue);
-  padding: 2rem;
-  margin: auto;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  z-index: 3;
 }
 .f-container > p {
   text-align: center;

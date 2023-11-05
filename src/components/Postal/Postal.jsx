@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { fetchPostalDetailsAsync, reset } from '../../features/detail/detailSlice';
 import "./Postal.css"
@@ -24,7 +24,8 @@ const Postal = () => {
         setPostalCode("")
     }
     return (
-        <div className='input-Container paddings'>
+
+        <div className='input-Container'>
             <h1>Enter Postal Code </h1>
             <div className=" ">
                 <input type="number" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} placeholder='Enter You Postal Code' />
@@ -33,7 +34,9 @@ const Postal = () => {
                     <button className='button' onClick={handleReset} >Reset</button>
                 </div>
             </div>
+
         </div>
+
     )
 }
 
